@@ -1,91 +1,84 @@
-import { MapPin, Mail, Phone, Github, ExternalLink, User } from 'lucide-react';
+import { MapPin, Mail, Phone, Github, ExternalLink, Linkedin, Facebook, MessageSquare } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 px-4 py-20">
-      <div className="max-w-4xl mx-auto text-center">
+    <div className="min-h-screen bg-[#0a1120] text-white font-sans selection:bg-blue-500/30">
+      {/* Navbar */}
+      <nav className="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+        <div className="text-xl font-bold tracking-tight">Elsayed Mustafa</div>
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#" className="hover:text-white transition-colors">Home</a>
+          <a href="#" className="hover:text-white transition-colors">About</a>
+          <a href="#" className="hover:text-white transition-colors">Projects</a>
+          <a href="#" className="hover:text-white transition-colors">Contact</a>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-all shadow-lg shadow-blue-900/20">
+            Hire Me
+          </button>
+        </div>
+      </nav>
 
-        {/* Profile Image Placeholder */}
-        <div className="flex justify-center mb-8">
-          <div className="w-40 h-40 rounded-full border-4 border-blue-200 bg-white flex items-center justify-center shadow-md overflow-hidden">
-            { 
+      {/* Hero Content */}
+      <section className="max-w-7xl mx-auto px-8 py-12 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        
+        {/* Left Side: Text */}
+        <div className="order-2 md:order-1">
+          <h1 className="text-6xl md:text-8xl font-bold mb-4 tracking-tight">
+            Elsayed <span className="text-blue-500">Mustafa</span>
+          </h1>
+          <h2 className="text-3xl md:text-4xl text-slate-400 font-light mb-8">
+            Data Analyst
+          </h2>
+          <p className="text-lg text-slate-400 max-w-lg leading-relaxed mb-10">
+            Transforming complex data into actionable insights. Specialized in data visualization, 
+            business intelligence, and advanced analytics to drive strategic decision-making.
+          </p>
+
+          <div className="flex flex-wrap gap-4 mb-12">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all flex items-center gap-2">
+              Get In Touch
+            </button>
+            <button className="border border-slate-700 hover:bg-slate-800 text-white px-8 py-3 rounded-lg font-semibold transition-all">
+              View Projects
+            </button>
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex gap-6 text-slate-500">
+            <a href="https://github.com/Elsayed-Mustafa" className="hover:text-blue-500 transition-colors">
+              <Github size={24} />
+            </a>
+            <a href="#" className="hover:text-blue-500 transition-colors">
+              <Linkedin size={24} />
+            </a>
+            <a href="#" className="hover:text-blue-500 transition-colors">
+              <Facebook size={24} />
+            </a>
+            <a href="mailto:elsayed.mustafa.ibrahim@gmail.com" className="hover:text-blue-500 transition-colors">
+              <Mail size={24} />
+            </a>
+            <a href="tel:01559850933" className="hover:text-blue-500 transition-colors">
+              <Phone size={24} />
+            </a>
+          </div>
+        </div>
+
+        {/* Right Side: Image with Glow Effect */}
+        <div className="order-1 md:order-2 flex justify-center items-center relative">
+          {/* Background Glow */}
+          <div className="absolute w-72 h-72 md:w-[450px] md:h-[450px] bg-blue-600/10 rounded-full blur-[100px]"></div>
+          
+          <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full p-1 bg-gradient-to-b from-blue-500 to-transparent shadow-2xl shadow-blue-500/20">
+            <div className="w-full h-full rounded-full overflow-hidden border-4 border-[#0a1120] bg-slate-900">
               <img
                 src="src/components/images/gemini_generated_image_f5qwp8f5qwp8f5qw.png"
                 alt="Elsayed Mustafa"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500"
               />
-            }
-            <User className="w-16 h-16 text-blue-400" />
+            </div>
           </div>
         </div>
 
-        <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-4">
-            Elsayed Mustafa
-          </h1>
-          <p className="text-2xl md:text-3xl text-blue-600 font-semibold mb-6">
-            Data Analyst
-          </p>
-          <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Turning raw data into clear business decisions. Strong in SQL, Python, and Power BI,
-            with hands-on experience building dashboards, analyzing trends, and delivering insights
-            that actually matter—not vanity metrics.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-slate-700 mb-8">
-          <div className="flex items-center gap-2">
-            <MapPin className="w-5 h-5 text-blue-600" />
-            <span>Cairo, Egypt</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Mail className="w-5 h-5 text-blue-600" />
-            <a
-              href="mailto:elsayed.mustafa.ibrahim@gmail.com"
-              className="hover:text-blue-600 transition-colors"
-            >
-              elsayed.mustafa.ibrahim@gmail.com
-            </a>
-          </div>
-          <div className="flex items-center gap-2">
-            <Phone className="w-5 h-5 text-blue-600" />
-            <span>01559850933</span>
-          </div>
-        </div>
-
-        <div className="flex justify-center gap-4">
-          <a
-            href="https://github.com/Elsayed-Mustafa"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-all hover:scale-105"
-          >
-            <Github className="w-5 h-5" />
-            GitHub
-          </a>
-          <a
-            href="https://github.com/El-Sayed-Mustafa"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all hover:scale-105"
-          >
-            <ExternalLink className="w-5 h-5" />
-            Portfolio
-          </a>
-        </div>
-
-        <div className="mt-12">
-          <a
-            href="#projects"
-            className="inline-block text-slate-600 hover:text-blue-600 transition-colors animate-bounce"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </a>
-        </div>
-
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
