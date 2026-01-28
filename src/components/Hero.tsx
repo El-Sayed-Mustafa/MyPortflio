@@ -70,16 +70,34 @@ export default function Hero() {
                 Mustafa
               </span>
             </motion.h1>
-            <motion.h2 
-              initial={{ x: -20, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="text-2xl md:text-3xl text-slate-300 font-medium tracking-wide flex items-center gap-3"
-            >
-              <span className="w-8 h-[2px] bg-blue-500"></span>
-              Data Analyst 
-              Business Intelligence Analyst
-            </motion.h2>
+         <motion.h2 
+  initial={{ x: -20, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  transition={{ delay: 0.4 }}
+  className="text-2xl md:text-3xl text-slate-300 font-medium tracking-wide flex flex-col gap-3 items-start"
+>
+  {/* السطر الأول مع الخط الأزرق */}
+  <div className="flex items-center gap-3">
+    <span className="w-8 h-[2px] bg-blue-500"></span>
+    <motion.span
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.6 }}
+    >
+      Data Analyst
+    </motion.span>
+  </div>
+
+  {/* السطر الثاني محاذٍ للكلمة الأولى وليس للخط */}
+  <motion.span 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.8 }}
+    className="ml-11 text-slate-400 text-xl md:text-2xl font-light"
+  >
+    Business Intelligence Analyst
+  </motion.span>
+</motion.h2>
           </div>
 
           <p className="text-lg md:text-xl text-slate-400 max-w-lg leading-relaxed font-light">
