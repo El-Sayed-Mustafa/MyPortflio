@@ -58,13 +58,14 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Social Icons - الروابط المحدثة هنا */}
+          {/* Social Icons - الروابط المحدثة بالكامل */}
           <div className="flex gap-6 pt-8 text-slate-500">
             <a 
               href="https://github.com/El-Sayed-Mustafa" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:text-blue-500 transition-colors"
+              title="GitHub"
             >
               <Github size={24} />
             </a>
@@ -73,6 +74,7 @@ export default function Hero() {
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:text-blue-500 transition-colors"
+              title="LinkedIn"
             >
               <Linkedin size={24} />
             </a>
@@ -81,18 +83,21 @@ export default function Hero() {
               target="_blank" 
               rel="noopener noreferrer" 
               className="hover:text-blue-500 transition-colors"
+              title="Facebook"
             >
               <Facebook size={24} />
             </a>
             <a 
               href="mailto:elsayed.mustafa.ibrahim@gmail.com" 
               className="hover:text-blue-500 transition-colors"
+              title="Email Me"
             >
               <Mail size={24} />
             </a>
             <a 
               href="tel:01559850933" 
               className="hover:text-blue-500 transition-colors"
+              title="Call Me"
             >
               <Phone size={24} />
             </a>
