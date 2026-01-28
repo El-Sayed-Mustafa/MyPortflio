@@ -6,7 +6,7 @@ const projects = [
     icon: BarChart3,
     tech: 'Power BI',
     link: 'https://github.com/El-Sayed-Mustafa/AdventureWorks-Report',
-    image: 'src/components/images/ADV.png',
+    image: '/ADV.png',
     highlights: [
       'Built executive-level dashboards for sales and customer analysis',
       'Discovered that top 20% of products generate 75% of revenue',
@@ -18,7 +18,7 @@ const projects = [
     icon: Users,
     tech: 'Power BI',
     link: 'https://github.com/El-Sayed-Mustafa/HR-Analytics',
-    image: 'src/components/images/HR.png', 
+    image: '/HR.png', 
     highlights: [
       'Designed dashboards to monitor workforce KPIs and attrition',
       'Identified 16.12% attrition rate, linked to overtime trends',
@@ -29,7 +29,7 @@ const projects = [
     icon: TrendingDown,
     tech: 'Power BI, Excel',
     link: 'https://github.com/El-Sayed-Mustafa/Customer-Churn-Analysis-using-Power-BI',
-    image: 'src/components/images/Churn.png',
+    image: '/Churn.png',
     highlights: [
       'Analyzed telecom customer behavior and churn patterns',
       'Reported 26.86% churn rate with actionable loyalty recommendations',
