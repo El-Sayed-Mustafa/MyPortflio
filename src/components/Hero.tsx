@@ -11,12 +11,14 @@ export default function Hero() {
             Elsayed Mustafa
           </div>
           
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          {/* تم إضافة Education هنا وتنسيق الروابط */}
+          <div className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
             <a href="#home" className="hover:text-blue-400 transition-colors">Home</a>
             <a href="#experience" className="hover:text-blue-400 transition-colors">Experience</a>
             <a href="#projects" className="hover:text-blue-400 transition-colors">Projects</a>
             <a href="#skills" className="hover:text-blue-400 transition-colors">Skills</a>
-            <a href="#footer" className="hover:text-white bg-blue-600 px-5 py-2 rounded-lg transition-all shadow-lg shadow-blue-900/20">
+            <a href="#education" className="hover:text-blue-400 transition-colors">Education</a>
+            <a href="#footer" className="ml-2 hover:text-white bg-blue-600 px-5 py-2 rounded-lg transition-all shadow-lg shadow-blue-900/20">
               Hire Me
             </a>
           </div>
@@ -58,7 +60,7 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Social Icons - الروابط المحدثة بالكامل */}
+          {/* Social Icons */}
           <div className="flex gap-6 pt-8 text-slate-500">
             <a 
               href="https://github.com/El-Sayed-Mustafa" 
