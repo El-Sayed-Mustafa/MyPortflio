@@ -1,4 +1,4 @@
-import { BarChart3, Users, TrendingDown, Github } from 'lucide-react';
+import { BarChart3, Users, TrendingDown, Github, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
@@ -8,12 +8,11 @@ const projects = [
     link: 'https://github.com/El-Sayed-Mustafa/AdventureWorks-Report',
     image: 'src/components/images/ADV.png',
     highlights: [
-      'Built executive-level dashboards for sales and customer analysis, including geo-mapping',
+      'Built executive-level dashboards for sales and customer analysis',
       'Discovered that top 20% of products generate 75% of revenue',
       'Tracked 12% MoM and 18% YoY sales growth',
     ],
   },
-  
   {
     title: 'HR Analytics Dashboard',
     icon: Users,
@@ -22,7 +21,7 @@ const projects = [
     image: 'src/components/images/HR.png', 
     highlights: [
       'Designed dashboards to monitor workforce KPIs and attrition',
-      'Identified 16.12% attrition rate, strongly linked to overtime and short employee tenure',
+      'Identified 16.12% attrition rate, linked to overtime trends',
     ],
   },
   {
@@ -33,19 +32,23 @@ const projects = [
     image: 'src/components/images/Churn.png',
     highlights: [
       'Analyzed telecom customer behavior and churn patterns',
-      'Reported 26.86% churn rate',
-      'Recommended loyalty programs for senior and monthly-contract customers',
+      'Reported 26.86% churn rate with actionable loyalty recommendations',
     ],
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-24 bg-[#0f172a] text-white">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">
-          Projects
-        </h2>
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-white bg-clip-text text-transparent">
+            Featured Projects
+          </h2>
+          <p className="text-slate-400 max-w-2xl mx-auto">
+            A showcase of data storytelling through interactive dashboards and deep-dive business analysis.
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => {
@@ -53,32 +56,43 @@ export default function Projects() {
             return (
               <div
                 key={index}
-                className="bg-slate-50 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200 flex flex-col"
+                className="group bg-[#1e293b] rounded-2xl overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 shadow-2xl flex flex-col"
               >
-                {/* Project Image */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-48 w-full object-cover"
-                />
+                {/* Project Image Wrapper */}
+                <div className="relative h-52 overflow-hidden">
+                  <div className="absolute inset-0 bg-blue-600/20 group-hover:bg-transparent transition-colors z-10"></div>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute bottom-4 right-4 z-20">
+                    <div className="bg-[#0a1120]/80 backdrop-blur-md p-2 rounded-lg border border-white/10">
+                      <Icon className="w-5 h-5 text-blue-400" />
+                    </div>
+                  </div>
+                </div>
 
+                {/* Content */}
                 <div className="p-6 flex flex-col flex-grow">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-blue-600" />
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                      {project.title}
+                    </h3>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">
-                    {project.title}
-                  </h3>
+                  <div className="flex gap-2 mb-4">
+                    {project.tech.split(', ').map((t, i) => (
+                      <span key={i} className="text-[10px] uppercase tracking-wider font-bold px-2 py-1 bg-blue-500/10 text-blue-400 rounded-md border border-blue-500/20">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
 
-                  <p className="text-sm text-blue-600 font-semibold mb-4">
-                    {project.tech}
-                  </p>
-
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-3 mb-8 flex-grow">
                     {project.highlights.map((highlight, i) => (
-                      <li key={i} className="text-slate-600 text-sm flex items-start">
-                        <span className="text-blue-600 mr-2 mt-1">•</span>
+                      <li key={i} className="text-slate-400 text-sm flex items-start gap-2">
+                        <span className="text-blue-500 font-bold leading-none mt-1">›</span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -88,10 +102,11 @@ export default function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition"
+                    className="w-full py-3 bg-[#0a1120] hover:bg-blue-600 text-slate-300 hover:text-white rounded-xl border border-slate-700 hover:border-blue-500 transition-all flex items-center justify-center gap-2 font-medium"
                   >
                     <Github className="w-4 h-4" />
-                    View on GitHub
+                    View Case Study
+                    <ExternalLink className="w-3 h-3 opacity-50" />
                   </a>
                 </div>
               </div>
