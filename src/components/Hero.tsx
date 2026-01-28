@@ -3,16 +3,22 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    // تم تغيير الخلفية هنا لتستخدم radial-gradient لتعطي العمق المطلوب
-    <div id="home" className="relative min-h-screen bg-[#0a1120] bg-[radial-gradient(circle_at_50%_-20%,#1e293b,transparent)] text-white font-sans selection:bg-blue-500/30 overflow-hidden">
+    <div 
+      id="home" 
+      className="relative min-h-screen text-white font-sans selection:bg-blue-500/30 overflow-hidden"
+      style={{ 
+        backgroundColor: '#0a1120',
+        backgroundImage: 'radial-gradient(circle at 50% 40%, #1e293b 0%, #0a1120 70%)' 
+      }}
+    >
       
-      {/* Dynamic Background Elements - تم تحسين الإضاءة الجانبية */}
+      {/* Background Decor & Lights */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-blue-600/10 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute top-[20%] right-[-10%] w-[40%] h-[40%] bg-blue-500/5 rounded-full blur-[100px]"></div>
+        {/* إضاءة علوية مركزية */}
+        <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[60%] h-[50%] bg-blue-600/10 rounded-full blur-[120px]"></div>
         
-        {/* Grid Pattern - تقليل الشفافية ليكون ناعم مثل الصورة */}
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.15] brightness-100 contrast-150"></div>
+        {/* الـ Grid Pattern مع شفافية خفيفة جداً */}
+        <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.12'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}></div>
       </div>
 
       {/* Navbar */}
@@ -43,7 +49,7 @@ export default function Hero() {
       </nav>
 
       {/* Hero Content */}
-      <section className="relative z-10 max-w-7xl mx-auto px-8 pt-32 pb-12 md:pt-56 md:pb-24 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <section className="relative z-10 max-w-7xl mx-auto px-8 pt-40 pb-20 md:pt-56 md:pb-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
         {/* Left Side: Animated Text */}
         <motion.div 
@@ -60,7 +66,7 @@ export default function Hero() {
               className="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] py-2"
             >
               Elsayed <br />
-              <span className="bg-gradient-to-b from-blue-400 to-blue-600 bg-clip-text text-transparent drop-shadow-[0_10px_10px_rgba(59,130,246,0.2)]">
+              <span className="bg-gradient-to-b from-blue-400 to-blue-600 bg-clip-text text-transparent drop-shadow-[0_10px_20px_rgba(59,130,246,0.3)]">
                 Mustafa
               </span>
             </motion.h1>
@@ -85,7 +91,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(37,99,235,0.4)" }}
               whileTap={{ scale: 0.95 }}
               href="#footer" 
-              className="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold flex items-center gap-2 transition-all shadow-xl shadow-blue-900/40"
+              className="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold transition-all shadow-xl shadow-blue-900/40"
             >
               Get In Touch
             </motion.a>
@@ -132,24 +138,24 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="order-1 md:order-2 flex justify-center items-center relative"
         >
-          {/* Glowing Aura behind image */}
-          <div className="absolute w-80 h-80 bg-blue-600/20 rounded-full blur-[100px]"></div>
+          {/* الإضاءة الخلفية للصورة - قمت بتقويتها هنا */}
+          <div className="absolute w-[120%] h-[120%] bg-blue-600/10 rounded-full blur-[120px]"></div>
           
           <motion.div 
             animate={{ rotate: 360 }}
-            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-            className="absolute w-72 h-72 md:w-[460px] md:h-[460px] rounded-full border border-blue-500/10 border-dashed"
+            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+            className="absolute w-72 h-72 md:w-[480px] md:h-[480px] rounded-full border border-blue-500/10 border-dashed"
           ></motion.div>
           
           <motion.div 
-            whileHover={{ scale: 1.05 }}
-            className="relative w-64 h-64 md:w-[420px] md:h-[420px] rounded-full p-1.5 bg-gradient-to-b from-blue-500/50 via-transparent to-blue-500/20 shadow-2xl"
+            whileHover={{ scale: 1.03 }}
+            className="relative w-64 h-64 md:w-[420px] md:h-[420px] rounded-full p-1 bg-gradient-to-b from-blue-500/40 via-transparent to-blue-500/10 shadow-2xl"
           >
             <div className="w-full h-full rounded-full overflow-hidden border-[6px] border-[#0a1120] bg-slate-900 shadow-inner">
               <img
                 src="src/components/images/gemini_generated_image_515zos515zos515z.png"
                 alt="Elsayed Mustafa"
-                className="w-full h-full object-cover transition-all duration-700"
+                className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
               />
             </div>
           </motion.div>
