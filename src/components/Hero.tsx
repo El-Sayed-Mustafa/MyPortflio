@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="text-xl font-bold tracking-tight">Elsayed Mustafa</div>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
           <a href="#Hero.tsx" className="hover:text-white transition-colors">Home</a>
-          <a href="#" className="hover:text-white transition-colors">About</a>
+          <a href="#Footer.tsx" className="hover:text-white transition-colors">About</a>
           <a href="#" className="hover:text-white transition-colors">Projects</a>
           <a href="#" className="hover:text-white transition-colors">Contact</a>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-all shadow-lg shadow-blue-900/20">
