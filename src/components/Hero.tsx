@@ -18,32 +18,45 @@ export default function Hero() {
         <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.12'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}></div>
       </div>
 
-      {/* Navbar */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a1120]/70 backdrop-blur-xl border-b border-white/5">
-        <div className="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="text-xl font-bold tracking-tight bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent"
-          >
-            Elsayed Mustafa
-          </motion.div>
-          
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-            {['home', 'experience', 'projects', 'skills', 'education'].map((item) => (
-              <a key={item} href={`#${item}`} className="capitalize hover:text-blue-400 transition-colors">{item}</a>
-            ))}
-            <motion.a 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="mailto:elsayed.mustafa.ibrahim@gmail.com" 
-              className="hover:text-white bg-blue-600 px-6 py-2.5 rounded-full transition-all shadow-lg shadow-blue-900/40 font-semibold"
-            >
-              Hire Me
-            </motion.a>
-          </div>
-        </div>
-      </nav>
+    {/* Navbar */}
+<nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a1120]/70 backdrop-blur-xl border-b border-white/5">
+  <div className="flex justify-between items-center px-8 py-5 max-w-7xl mx-auto">
+    <motion.div 
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      className="text-xl font-bold tracking-tight bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent"
+    >
+      Elsayed Mustafa
+    </motion.div>
+    
+    <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+      {['home', 'experience', 'projects', 'skills', 'education'].map((item) => (
+        <a key={item} href={`#${item}`} className="capitalize hover:text-blue-400 transition-colors">{item}</a>
+      ))}
+      
+      {/* التعديل هنا لزر Hire Me */}
+      <motion.a 
+        whileHover={{ 
+          scale: 1.05,
+          backgroundColor: "#2563eb", // لون أزرق صريح عند التحويم
+          boxShadow: "0 0 20px rgba(37,99,235,0.4)"
+        }}
+        whileTap={{ scale: 0.95 }}
+        href="https://wa.me/201559850933" // أكشن واتساب مباشر (تأكد من رقم الهاتف)
+        target="_blank"
+        className="relative overflow-hidden group hover:text-white bg-blue-600/20 border border-blue-500/50 px-6 py-2.5 rounded-full transition-all font-semibold flex items-center gap-2"
+      >
+        <span className="relative z-10">Hire Me</span>
+        {/* تأثير الوميض الخفيف الذي يمر على الزر */}
+        <motion.div 
+          animate={{ x: ['-100%', '200%'] }}
+          transition={{ repeat: Infinity, duration: 3, ease: "linear" }}
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent"
+        />
+      </motion.a>
+    </div>
+  </div>
+</nav>
 
       <section className="relative z-10 max-w-7xl mx-auto px-8 pt-40 pb-20 md:pt-56 md:pb-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
