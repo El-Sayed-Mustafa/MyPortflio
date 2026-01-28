@@ -70,7 +70,7 @@ export default function Hero() {
           <div className="relative w-64 h-64 md:w-96 md:h-96 rounded-full p-1 bg-gradient-to-b from-blue-500 to-transparent shadow-2xl shadow-blue-500/20">
             <div className="w-full h-full rounded-full overflow-hidden border-4 border-[#0a1120] bg-slate-900">
               <img
-                src="src/components/images/gemini_generated_image_f5qwp8f5qwp8f5qw.png"
+                src="src/components/images/gemini_generated_image_515zos515zos515z.png"
                 alt="Elsayed Mustafa"
                 className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-500"
               />
