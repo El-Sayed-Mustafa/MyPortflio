@@ -39,7 +39,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 bg-[#0f172a] text-white">
+    <section id="projects" className="py-24 bg-[#0a1120] text-white border-t border-slate-800/50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-white bg-clip-text text-transparent">
@@ -56,15 +56,14 @@ export default function Projects() {
             return (
               <div
                 key={index}
-                className="group bg-[#1e293b] rounded-2xl overflow-hidden border border-slate-700/50 hover:border-blue-500/50 transition-all duration-500 shadow-2xl flex flex-col"
+                className="group bg-[#1e293b] rounded-2xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-500 shadow-2xl flex flex-col"
               >
-                {/* Project Image Wrapper */}
                 <div className="relative h-52 overflow-hidden">
-                  <div className="absolute inset-0 bg-blue-600/20 group-hover:bg-transparent transition-colors z-10"></div>
+                  <div className="absolute inset-0 bg-[#0a1120]/20 group-hover:bg-transparent transition-colors z-10"></div>
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute bottom-4 right-4 z-20">
                     <div className="bg-[#0a1120]/80 backdrop-blur-md p-2 rounded-lg border border-white/10">
@@ -73,13 +72,10 @@ export default function Projects() {
                   </div>
                 </div>
 
-                {/* Content */}
                 <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
-                      {project.title}
-                    </h3>
-                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
+                    {project.title}
+                  </h3>
 
                   <div className="flex gap-2 mb-4">
                     {project.tech.split(', ').map((t, i) => (
@@ -92,7 +88,7 @@ export default function Projects() {
                   <ul className="space-y-3 mb-8 flex-grow">
                     {project.highlights.map((highlight, i) => (
                       <li key={i} className="text-slate-400 text-sm flex items-start gap-2">
-                        <span className="text-blue-500 font-bold leading-none mt-1">›</span>
+                        <span className="text-blue-500 font-bold mt-1">▹</span>
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -102,11 +98,11 @@ export default function Projects() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full py-3 bg-[#0a1120] hover:bg-blue-600 text-slate-300 hover:text-white rounded-xl border border-slate-700 hover:border-blue-500 transition-all flex items-center justify-center gap-2 font-medium"
+                    className="w-full py-3 bg-[#0a1120] hover:bg-blue-600 text-slate-300 hover:text-white rounded-xl border border-slate-700 hover:border-blue-500 transition-all flex items-center justify-center gap-2 font-medium group/btn"
                   >
                     <Github className="w-4 h-4" />
                     View Case Study
-                    <ExternalLink className="w-3 h-3 opacity-50" />
+                    <ExternalLink className="w-3 h-3 opacity-50 group-hover/btn:opacity-100" />
                   </a>
                 </div>
               </div>
