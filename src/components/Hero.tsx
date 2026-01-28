@@ -1,4 +1,4 @@
-import { Github, Linkedin, Facebook, Mail, Phone, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Facebook, Mail, Phone } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -58,21 +58,42 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Social Icons */}
+          {/* Social Icons - الروابط المحدثة هنا */}
           <div className="flex gap-6 pt-8 text-slate-500">
-            <a href="https://github.com/Elsayed-Mustafa" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors">
+            <a 
+              href="https://github.com/El-Sayed-Mustafa" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-blue-500 transition-colors"
+            >
               <Github size={24} />
             </a>
-            <a href="#" className="hover:text-blue-500 transition-colors">
+            <a 
+              href="https://www.linkedin.com/in/eng-elsayed-mustafa/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-blue-500 transition-colors"
+            >
               <Linkedin size={24} />
             </a>
-            <a href="#" className="hover:text-blue-500 transition-colors">
+            <a 
+              href="https://www.facebook.com/alsayed.mostafa.507/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hover:text-blue-500 transition-colors"
+            >
               <Facebook size={24} />
             </a>
-            <a href="mailto:elsayed.mustafa.ibrahim@gmail.com" className="hover:text-blue-500 transition-colors">
+            <a 
+              href="mailto:elsayed.mustafa.ibrahim@gmail.com" 
+              className="hover:text-blue-500 transition-colors"
+            >
               <Mail size={24} />
             </a>
-            <a href="tel:01559850933" className="hover:text-blue-500 transition-colors">
+            <a 
+              href="tel:01559850933" 
+              className="hover:text-blue-500 transition-colors"
+            >
               <Phone size={24} />
             </a>
           </div>
@@ -80,7 +101,6 @@ export default function Hero() {
 
         {/* Right Side: Professional Image with Glow */}
         <div className="order-1 md:order-2 flex justify-center items-center relative">
-          {/* Background Glow Effect */}
           <div className="absolute w-72 h-72 md:w-[500px] md:h-[500px] bg-blue-600/10 rounded-full blur-[120px] animate-pulse"></div>
           
           <div className="relative w-64 h-64 md:w-[400px] md:h-[400px] rounded-full p-1 bg-gradient-to-b from-blue-500 to-transparent shadow-2xl shadow-blue-500/20">
