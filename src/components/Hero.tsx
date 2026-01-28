@@ -7,7 +7,7 @@ export default function Hero() {
       <nav className="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
         <div className="text-xl font-bold tracking-tight">Elsayed Mustafa</div>
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-          <a href="#أ" className="hover:text-white transition-colors">Home</a>
+          <a href="#Hero.tsx" className="hover:text-white transition-colors">Home</a>
           <a href="#" className="hover:text-white transition-colors">About</a>
           <a href="#" className="hover:text-white transition-colors">Projects</a>
           <a href="#" className="hover:text-white transition-colors">Contact</a>
