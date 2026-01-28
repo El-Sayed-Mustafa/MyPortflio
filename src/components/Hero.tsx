@@ -116,7 +116,7 @@ export default function Hero() {
                 boxShadow: ["0 0 0px rgba(37,99,235,0)", "0 0 20px rgba(37,99,235,0.3)", "0 0 0px rgba(37,99,235,0)"] 
               }}
               transition={{ boxShadow: { repeat: Infinity, duration: 2 } }}
-              href="mailto:elsayed.mustafa.ibrahim@gmail.com" 
+              href: "https://www.linkedin.com/in/eng-elsayed-mustafa/"
               className="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold transition-all shadow-xl shadow-blue-900/40 flex items-center gap-2"
             >
               Get In Touch
