@@ -9,7 +9,6 @@ export default function Hero() {
         <div className="flex justify-center mb-8">
           <div className="w-40 h-40 rounded-full border-4 border-blue-200 bg-white flex items-center justify-center shadow-md overflow-hidden">
             { 
-              لما تحط الصورة:
               <img
                 src="src/components/images/gemini_generated_image_f5qwp8f5qwp8f5qw.png"
                 alt="Elsayed Mustafa"
