@@ -174,7 +174,7 @@ export default function Hero() {
           >
             <div className="w-full h-full rounded-full overflow-hidden border-[6px] border-[#0a1120] bg-slate-900 shadow-inner">
               <img
-                src="src/components/images/gemini_generated_image_515zos515zos515z.png"
+                src="/profile.png"
                 alt="Elsayed Mustafa"
                 className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
               />
