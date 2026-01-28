@@ -14,10 +14,7 @@ export default function Hero() {
       
       {/* Background Decor & Lights */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* إضاءة علوية مركزية */}
         <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[60%] h-[50%] bg-blue-600/10 rounded-full blur-[120px]"></div>
-        
-        {/* الـ Grid Pattern مع شفافية خفيفة جداً */}
         <div className="absolute inset-0 opacity-[0.08]" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.12'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` }}></div>
       </div>
 
@@ -39,7 +36,7 @@ export default function Hero() {
             <motion.a 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="#footer" 
+              href="mailto:elsayed.mustafa.ibrahim@gmail.com" 
               className="hover:text-white bg-blue-600 px-6 py-2.5 rounded-full transition-all shadow-lg shadow-blue-900/40 font-semibold"
             >
               Hire Me
@@ -48,10 +45,8 @@ export default function Hero() {
         </div>
       </nav>
 
-      {/* Hero Content */}
       <section className="relative z-10 max-w-7xl mx-auto px-8 pt-40 pb-20 md:pt-56 md:pb-32 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
-        {/* Left Side: Animated Text */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,34 +65,28 @@ export default function Hero() {
                 Mustafa
               </span>
             </motion.h1>
-         <motion.h2 
-  initial={{ x: -20, opacity: 0 }}
-  animate={{ x: 0, opacity: 1 }}
-  transition={{ delay: 0.4 }}
-  className="text-2xl md:text-3xl text-slate-300 font-medium tracking-wide flex flex-col gap-3 items-start"
->
-  {/* السطر الأول مع الخط الأزرق */}
-  <div className="flex items-center gap-3">
-    <span className="w-8 h-[2px] bg-blue-500"></span>
-    <motion.span
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.6 }}
-    >
-      Data Analyst
-    </motion.span>
-  </div>
 
-  {/* السطر الثاني محاذٍ للكلمة الأولى وليس للخط */}
-  <motion.span 
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ delay: 0.8 }}
-    className="ml-11 text-slate-400 text-xl md:text-2xl font-light"
-  >
-    Business Intelligence Analyst
-  </motion.span>
-</motion.h2>
+            <motion.h2 
+              initial={{ x: -20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="text-2xl md:text-3xl text-slate-300 font-medium tracking-wide flex flex-col gap-3 items-start"
+            >
+              <div className="flex items-center gap-3">
+                <span className="w-8 h-[2px] bg-blue-500"></span>
+                <motion.span initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}>
+                  Data Analyst
+                </motion.span>
+              </div>
+              <motion.span 
+                initial={{ opacity: 0 }} 
+                animate={{ opacity: 1 }} 
+                transition={{ delay: 0.8 }}
+                className="ml-11 text-slate-400 text-xl md:text-2xl font-light"
+              >
+                Business Intelligence Analyst
+              </motion.span>
+            </motion.h2>
           </div>
 
           <p className="text-lg md:text-xl text-slate-400 max-w-lg leading-relaxed font-light">
@@ -106,14 +95,21 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-5 pt-4">
+            {/* الأكشن الأساسي: نموذج تواصل مباشر عبر الإيميل مع تأثير النبض */}
             <motion.a 
-              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(37,99,235,0.4)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(37,99,235,0.6)" }}
               whileTap={{ scale: 0.95 }}
-              href="#footer" 
-              className="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold transition-all shadow-xl shadow-blue-900/40"
+              animate={{ 
+                boxShadow: ["0 0 0px rgba(37,99,235,0)", "0 0 20px rgba(37,99,235,0.3)", "0 0 0px rgba(37,99,235,0)"] 
+              }}
+              transition={{ boxShadow: { repeat: Infinity, duration: 2 } }}
+              href="mailto:elsayed.mustafa.ibrahim@gmail.com" 
+              className="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold transition-all shadow-xl shadow-blue-900/40 flex items-center gap-2"
             >
               Get In Touch
+              <Mail size={18} />
             </motion.a>
+
             <motion.a 
               whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.05)" }}
               whileTap={{ scale: 0.95 }}
@@ -124,7 +120,6 @@ export default function Hero() {
             </motion.a>
           </div>
 
-          {/* Social Icons */}
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -137,35 +132,26 @@ export default function Hero() {
               { Icon: Mail, href: "mailto:elsayed.mustafa.ibrahim@gmail.com" },
               { Icon: Phone, href: "tel:01559850933" }
             ].map((social, i) => (
-              <motion.a 
-                key={i}
-                whileHover={{ y: -8, color: "#3b82f6" }}
-                href={social.href}
-                target="_blank"
-                className="transition-all duration-300"
-              >
+              <motion.a key={i} whileHover={{ y: -8, color: "#3b82f6" }} href={social.href} target="_blank" className="transition-all duration-300">
                 <social.Icon size={26} />
               </motion.a>
             ))}
           </motion.div>
         </motion.div>
 
-        {/* Right Side: Animated Professional Image */}
+        {/* Right Side: Professional Image */}
         <motion.div 
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
           className="order-1 md:order-2 flex justify-center items-center relative"
         >
-          {/* الإضاءة الخلفية للصورة - قمت بتقويتها هنا */}
           <div className="absolute w-[120%] h-[120%] bg-blue-600/10 rounded-full blur-[120px]"></div>
-          
           <motion.div 
             animate={{ rotate: 360 }}
             transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
             className="absolute w-72 h-72 md:w-[480px] md:h-[480px] rounded-full border border-blue-500/10 border-dashed"
           ></motion.div>
-          
           <motion.div 
             whileHover={{ scale: 1.03 }}
             className="relative w-64 h-64 md:w-[420px] md:h-[420px] rounded-full p-1 bg-gradient-to-b from-blue-500/40 via-transparent to-blue-500/10 shadow-2xl"
@@ -179,7 +165,6 @@ export default function Hero() {
             </div>
           </motion.div>
         </motion.div>
-
       </section>
     </div>
   );
