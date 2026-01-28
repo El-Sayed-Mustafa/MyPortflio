@@ -1,4 +1,4 @@
-import { Briefcase, Calendar } from 'lucide-react';
+import { Briefcase, Calendar, MapPin } from 'lucide-react';
 
 const experiences = [
   {
@@ -25,35 +25,49 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-slate-50">
+    <section id="experience" className="py-24 bg-[#0a1120] text-white border-t border-slate-800/50">
       <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-slate-900 mb-12 text-center">Experience</h2>
-        <div className="space-y-8">
+        <h2 className="text-4xl font-bold mb-16 text-center bg-gradient-to-r from-blue-400 to-white bg-clip-text text-transparent">
+          Professional Experience
+        </h2>
+        
+        <div className="space-y-10 relative before:absolute before:inset-0 before:ml-5 md:before:mx-auto before:h-full before:w-0.5 before:bg-gradient-to-b before:from-blue-600 before:via-slate-800 before:to-transparent">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-600"
+              className="relative bg-[#1e293b] rounded-2xl p-8 shadow-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all group hover:-translate-y-1"
             >
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+              {/* Timeline dot */}
+              <div className="absolute top-8 -left-3 md:-left-4 w-6 h-6 bg-blue-600 rounded-full border-4 border-[#0a1120] shadow-[0_0_15px_rgba(37,99,235,0.5)]"></div>
+
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6 gap-4">
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-1">{exp.title}</h3>
-                  <div className="flex items-center gap-2 text-blue-600 font-semibold mb-2">
-                    <Briefcase className="w-4 h-4" />
-                    <span>{exp.company}</span>
-                    <span className="text-slate-400">•</span>
-                    <span className="text-slate-600">{exp.location}</span>
+                  <h3 className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                    {exp.title}
+                  </h3>
+                  <div className="flex flex-wrap items-center gap-4 mt-2">
+                    <div className="flex items-center gap-1.5 text-blue-400 font-medium">
+                      <Briefcase className="w-4 h-4" />
+                      <span>{exp.company}</span>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-slate-400 text-sm">
+                      <MapPin className="w-4 h-4" />
+                      <span>{exp.location}</span>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-slate-600 text-sm">
+                
+                <div className="flex items-center gap-2 px-4 py-1.5 bg-[#0f172a] rounded-full text-blue-300 text-sm font-medium border border-blue-500/20 w-fit">
                   <Calendar className="w-4 h-4" />
                   <span>{exp.period}</span>
                 </div>
               </div>
-              <ul className="space-y-2">
+
+              <ul className="space-y-3">
                 {exp.responsibilities.map((resp, i) => (
-                  <li key={i} className="text-slate-600 flex items-start">
-                    <span className="text-blue-600 mr-2 mt-1">•</span>
-                    <span>{resp}</span>
+                  <li key={i} className="text-slate-400 flex items-start gap-3 leading-relaxed">
+                    <span className="w-2 h-2 rounded-full bg-blue-500/50 mt-2 shrink-0 group-hover:bg-blue-500 transition-colors" />
+                    {resp}
                   </li>
                 ))}
               </ul>
