@@ -107,31 +107,34 @@ export default function Hero() {
             business intelligence, and advanced analytics.
           </p>
 
-          <div className="flex flex-wrap gap-5 pt-4">
-            {/* الأكشن الأساسي: نموذج تواصل مباشر عبر الإيميل مع تأثير النبض */}
-            <motion.a 
-              whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(37,99,235,0.6)" }}
-              whileTap={{ scale: 0.95 }}
-              animate={{ 
-                boxShadow: ["0 0 0px rgba(37,99,235,0)", "0 0 20px rgba(37,99,235,0.3)", "0 0 0px rgba(37,99,235,0)"] 
-              }}
-              transition={{ boxShadow: { repeat: Infinity, duration: 2 } }}
-              href="https://www.linkedin.com/in/eng-elsayed-mustafa/" 
-              className="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold transition-all shadow-xl shadow-blue-900/40 flex items-center gap-2"
-            >
-              Get In Touch
-              <Mail size={18} />
-            </motion.a>
+        <div className="flex flex-wrap gap-5 pt-4">
+  {/* زر Get In Touch - يفتح لينكد إن مع تأثير النبض */}
+  <motion.a 
+    whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(37,99,235,0.6)" }}
+    whileTap={{ scale: 0.95 }}
+    animate={{ 
+      boxShadow: ["0 0 0px rgba(37,99,235,0)", "0 0 20px rgba(37,99,235,0.3)", "0 0 0px rgba(37,99,235,0)"] 
+    }}
+    transition={{ boxShadow: { repeat: Infinity, duration: 2 } }}
+    href="https://www.linkedin.com/in/eng-elsayed-mustafa/" 
+    target="_blank" // لفتح اللينك في صفحة جديدة
+    rel="noopener noreferrer"
+    className="bg-blue-600 text-white px-10 py-4 rounded-xl font-bold transition-all shadow-xl shadow-blue-900/40 flex items-center gap-2 group"
+  >
+    Get In Touch
+    <Linkedin size={18} className="group-hover:animate-bounce" />
+  </motion.a>
 
-            <motion.a 
-              whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.05)" }}
-              whileTap={{ scale: 0.95 }}
-              href="#projects" 
-              className="border border-slate-700 text-white px-10 py-4 rounded-xl font-bold transition-all backdrop-blur-sm"
-            >
-              View Projects
-            </motion.a>
-          </div>
+  {/* زر View Projects - ينقلك لسكشن المشاريع بسلاسة */}
+  <motion.a 
+    whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.05)" }}
+    whileTap={{ scale: 0.95 }}
+    href="#projects" 
+    className="border border-slate-700 text-white px-10 py-4 rounded-xl font-bold transition-all backdrop-blur-sm"
+  >
+    View Projects
+  </motion.a>
+</div>
 
           <motion.div 
             initial={{ opacity: 0 }}
