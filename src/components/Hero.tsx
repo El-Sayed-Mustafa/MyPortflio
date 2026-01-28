@@ -1,9 +1,25 @@
-import { MapPin, Mail, Phone, Github, ExternalLink } from 'lucide-react';
+import { MapPin, Mail, Phone, Github, ExternalLink, User } from 'lucide-react';
 
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 px-4 py-20">
       <div className="max-w-4xl mx-auto text-center">
+
+        {/* Profile Image Placeholder */}
+        <div className="flex justify-center mb-8">
+          <div className="w-40 h-40 rounded-full border-4 border-blue-200 bg-white flex items-center justify-center shadow-md overflow-hidden">
+            { 
+              لما تحط الصورة:
+              <img
+                src="src/components/images/gemini_generated_image_f5qwp8f5qwp8f5qw.png"
+                alt="Elsayed Mustafa"
+                className="w-full h-full object-cover"
+              />
+            }
+            <User className="w-16 h-16 text-blue-400" />
+          </div>
+        </div>
+
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold text-slate-900 mb-4">
             Elsayed Mustafa
@@ -25,7 +41,10 @@ export default function Hero() {
           </div>
           <div className="flex items-center gap-2">
             <Mail className="w-5 h-5 text-blue-600" />
-            <a href="mailto:elsayed.mustafa.ibrahim@gmail.com" className="hover:text-blue-600 transition-colors">
+            <a
+              href="mailto:elsayed.mustafa.ibrahim@gmail.com"
+              className="hover:text-blue-600 transition-colors"
+            >
               elsayed.mustafa.ibrahim@gmail.com
             </a>
           </div>
@@ -66,6 +85,7 @@ export default function Hero() {
             </svg>
           </a>
         </div>
+
       </div>
     </section>
   );
