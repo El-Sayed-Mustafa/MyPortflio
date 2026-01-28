@@ -77,7 +77,7 @@ export default function Hero() {
               className="text-2xl md:text-3xl text-slate-300 font-medium tracking-wide flex items-center gap-3"
             >
               <span className="w-8 h-[2px] bg-blue-500"></span>
-              Senior Data Analyst
+              Data Analyst | Business Intelligence Analyst
             </motion.h2>
           </div>
 
