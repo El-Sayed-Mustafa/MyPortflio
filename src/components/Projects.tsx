@@ -1,6 +1,18 @@
-import { BarChart3, Users, TrendingDown, Github, ExternalLink } from 'lucide-react';
+import { BarChart3, Users, TrendingDown, Github, ExternalLink, MessageSquare } from 'lucide-react';
 
 const projects = [
+  {
+    title: 'The Pulse of Connection: Chat Analytics',
+    icon: MessageSquare,
+    tech: 'Power BI, Python, NLP',
+    link: 'https://github.com/El-Sayed-Mustafa/WhatsApp-Chat-Analytics-Sentiment-Engine', // Replace with your actual repo link
+    image: '/chat.png', // Ensure you add the image to your public folder
+    highlights: [
+      'Transformed 64,000+ unstructured messages into a Star Schema BI solution',
+      'Engineered NLP sentiment scoring to track emotional trends and "lag" impact',
+      'Built interactive UI with dynamic toggles and AI-powered smart narratives',
+    ],
+  },
   {
     title: 'AdventureWorks Business Intelligence Dashboard',
     icon: BarChart3,
@@ -36,6 +48,7 @@ const projects = [
     ],
   },
 ];
+
 
 export default function Projects() {
   return (
