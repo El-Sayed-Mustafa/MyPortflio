@@ -6,7 +6,7 @@ const projects = [
     icon: MessageSquare,
     tech: 'Power BI, Python, NLP',
     link: 'https://github.com/El-Sayed-Mustafa/WhatsApp-Chat-Analytics-Sentiment-Engine', // Replace with your actual repo link
-    image: '/chat.png', // Ensure you add the image to your public folder
+    image: 'El-Sayed-Mustafa/MyPortflio/src/components/images/chat.png', // Ensure you add the image to your public folder
     highlights: [
       'Transformed 64,000+ unstructured messages into a Star Schema BI solution',
       'Engineered NLP sentiment scoring to track emotional trends and "lag" impact',
@@ -63,15 +63,15 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => {
+// ابحث عن السطر ده في الكود بتاعك وغيّره للآتي:
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">          {projects.map((project, index) => { 
             const Icon = project.icon;
             return (
               <div
                 key={index}
                 className="group bg-[#1e293b] rounded-2xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-500 shadow-2xl flex flex-col"
               >
-                <div className="relative h-52 overflow-hidden">
+                <div className="relative h-64 overflow-hidden">
                   <div className="absolute inset-0 bg-[#0a1120]/20 group-hover:bg-transparent transition-colors z-10"></div>
                   <img
                     src={project.image}
