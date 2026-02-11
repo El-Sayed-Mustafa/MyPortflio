@@ -6,7 +6,7 @@ const projects = [
     icon: MessageSquare,
     tech: 'Power BI, Python, NLP',
     link: 'https://github.com/El-Sayed-Mustafa/WhatsApp-Chat-Analytics-Sentiment-Engine', // Replace with your actual repo link
-    image: 'El-Sayed-Mustafa/MyPortflio/src/components/images/chat.png', // Ensure you add the image to your public folder
+    image: 'public/chat.png', // Ensure you add the image to your public folder
     highlights: [
       'Transformed 64,000+ unstructured messages into a Star Schema BI solution',
       'Engineered NLP sentiment scoring to track emotional trends and "lag" impact',
