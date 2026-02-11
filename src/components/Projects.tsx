@@ -63,15 +63,16 @@ export default function Projects() {
           </p>
         </div>
 
-// ابحث عن السطر ده في الكود بتاعك وغيّره للآتي:
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">          {projects.map((project, index) => { 
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-16">    
+                  {projects.map((project, index) => { 
             const Icon = project.icon;
             return (
               <div
                 key={index}
                 className="group bg-[#1e293b] rounded-2xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-500 shadow-2xl flex flex-col"
               >
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-128 overflow-hidden">
                   <div className="absolute inset-0 bg-[#0a1120]/20 group-hover:bg-transparent transition-colors z-10"></div>
                   <img
                     src={project.image}
