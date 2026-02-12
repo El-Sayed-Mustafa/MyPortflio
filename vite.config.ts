@@ -1,10 +1,4 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
-});
+  base: '/MyPortflio/', // اكتب اسم المستودع هنا بالظبط بين الـ slashes
+  plugins: [react()], // أو أي بلجن تستخدمه
+})
