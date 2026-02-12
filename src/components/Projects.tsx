@@ -72,19 +72,19 @@ export default function Projects() {
                 key={index}
                 className="group bg-[#1e293b] rounded-2xl overflow-hidden border border-slate-800 hover:border-blue-500/50 transition-all duration-500 shadow-2xl flex flex-col"
               >
-                <div className="relative h-128 overflow-hidden">
-                  <div className="absolute inset-0 bg-[#0a1120]/20 group-hover:bg-transparent transition-colors z-10"></div>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute bottom-4 right-4 z-20">
-                    <div className="bg-[#0a1120]/80 backdrop-blur-md p-2 rounded-lg border border-white/10">
-                      <Icon className="w-5 h-5 text-blue-400" />
-                    </div>
+              <div className="relative h-80 overflow-hidden bg-[#0f172a] flex items-center justify-center"> {/* تم تقليل الطول لـ h-80 وإضافة خلفية */}
+                <div className="absolute inset-0 bg-[#0a1120]/20 group-hover:bg-transparent transition-colors z-10"></div>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="max-h-full max-w-full object-contain p-4 group-hover:scale-105 transition-transform duration-700" 
+                />
+                <div className="absolute bottom-4 right-4 z-20">
+                  <div className="bg-[#0a1120]/80 backdrop-blur-md p-2 rounded-lg border border-white/10">
+                    <Icon className="w-5 h-5 text-blue-400" />
                   </div>
                 </div>
+              </div>
 
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
