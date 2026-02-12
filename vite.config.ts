@@ -1,15 +1,8 @@
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/MyPortflio/', // اكتب اسم المستودع هنا بالظبط بين الـ slashes
-  plugins: [react()], // أو أي بلجن تستخدمه
+  plugins: [react()],
+  base: '/MyPortflio/', // مهم جداً عشان الـ CSS والـ JS يشتغلوا
 })
-
-function react() {
-  throw new Error("Function not implemented.");
-}
-function defineConfig(arg0: {
-  base: string; // اكتب اسم المستودع هنا بالظبط بين الـ slashes
-  plugins: void[];
-}) {
-  throw new Error("Function not implemented.");
-}
-
